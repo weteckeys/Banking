@@ -1,0 +1,63 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar>
+      <ion-button (click)="goBack()" fill="clear" slot="start">
+          <ion-icon name="arrow-back" style="font-size: 26px;color: black"></ion-icon>
+      </ion-button>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+    
+<div class="main_content_div">
+
+    <ion-label class="welcome_lbl">Payment</ion-label>
+
+    <ion-label class="amount_lbl">Amount Payable <span>Rs. 2000</span></ion-label>
+    
+
+    <div class="flex_div" (click)="payID = 1">
+        <div class="round_div">
+            <img src="assets/imgs/home_active.png">
+        </div>
+        <ion-label>Net Banking</ion-label>
+    </div>
+
+    <div class="content_div" *ngIf="payID == 1">
+        <ion-button expand="block" (click)="goToSuccess()">
+            Pay using Net Banking
+        </ion-button>
+    </div>
+
+    <div class="flex_div" (click)="payID = 2">
+        <div class="round_div">
+            <img src="assets/imgs/home_active.png">
+        </div>
+        <ion-label>Bank Transfer</ion-label>
+    </div>
+
+    <div class="content_div" *ngIf="payID == 2">
+        <ion-button expand="block" (click)="goToSuccess()">
+            Pay using Bank Transfer
+        </ion-button>
+    </div>
+
+    <div class="flex_div" (click)="payID = 3">
+        <div class="round_div">
+            <img src="assets/imgs/home_active.png">
+        </div>
+        <ion-label>Enter UPI ID</ion-label>
+    </div>
+
+    <div class="content_div" *ngIf="payID == 3">
+        <ion-item>
+            <ion-label position="floating">Enter UPI ID</ion-label>
+            <ion-input></ion-input>
+        </ion-item>
+        <ion-button expand="block" (click)="goToSuccess()">
+            Pay
+        </ion-button>
+    </div>
+
+</div>
+</ion-content>

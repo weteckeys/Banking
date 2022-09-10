@@ -1,0 +1,185 @@
+ion-toolbar {
+    --background: #F8F9F9;
+}
+ion-content {
+    --background: #F8F9F9;
+}
+.main_container_div {
+    padding: 16px;
+
+    ion-label {
+        display: block;
+    }
+
+    .flex_header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        ion-label {
+            font-size: 20px;
+            color: #042C5C;
+            font-family: 'semi-bold';
+        }
+        img {
+            width: 20px;
+        }
+    }
+
+    .flex_div {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 20px;
+
+        .left_div {
+            .simple_lbl {
+                font-size: 13px;
+                color: #77869E;
+                font-family: 'semi-bold';
+            }
+    
+            .price {
+                font-size: 30px;
+                font-family: 'semi-bold';
+            }
+        }
+
+        .right_div {
+            .color_div {
+                height: 25px;
+                width: 25px;
+                min-width: 25px;
+                 border-radius: 5px;
+                 position: relative;
+    
+                 ion-icon {
+                     position: absolute;
+                     top: 50%;
+                     left: 50%;
+                     transform: translate(-50%,-50%);
+                     font-size: 25px;
+                 }
+            }
+
+            ion-label {
+                font-size: 13px;
+                margin-left: 10px;
+                font-family: 'semi-bold';
+            }
+        }
+    }
+
+    .month_div {
+        display: flex;
+        align-items: center;
+        margin-top: 20px;
+        margin-bottom: 30px;
+
+        .popover_div {
+            background: white;
+            min-width: 100px;
+            border-radius: 25px;
+            box-shadow: 0px 3px 6px rgba(0,0,0,0.2);
+            padding: 5px 10px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            ion-label {
+                color: #77869E;
+                font-size: 13px;
+                font-family: 'semi-bold';
+            }
+
+            ion-icon {
+                color: #77869E;
+            }
+        }
+
+        .month_list {
+            display: flex;
+            overflow-x: scroll;
+            align-items: center;
+            margin-left: 16px;
+            .small_btn {
+                width: 70px !important;
+                min-width: 70px;
+                border-radius: 5px;
+                text-align: center;
+                padding-top: 5px;
+                padding-bottom: 5px;
+
+                ion-label {
+                    text-align: center;
+                    font-size: 13px;
+                    color: #77869E;
+                    font-family: 'semi-bold';
+                }
+            }
+            
+            .active {
+                background: #DFE7F5;
+
+                ion-label {
+                    color: var(--ion-color-primary);
+                }
+            }
+        }
+    }
+
+    .title_lbl {
+        font-size: 20px;
+        font-family: 'semi-bold';
+        margin-top: 24px;
+        margin-bottom: 16px;
+    }
+
+    .shopping_div {
+        background: white;
+        border-radius: 10px;
+        padding: 10px;
+        display: flex;
+        align-items: center;
+        position: relative;
+        margin-bottom: 20px;
+        box-shadow: 0px 3px 6px rgba(0,0,0,0.2);
+
+        .color_box {
+            height: 55px;
+            width: 55px;
+            min-width: 55px;
+            border-radius: 10px;
+            position: relative;
+
+            img {
+                width: 25px;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%,-50%);
+            }
+        }
+        .content_div {
+            padding-left: 16px;
+
+            .name {
+                font-size: 16px;
+                font-family: 'semi-bold';
+                margin-bottom: 5px;
+            }
+
+            .date {
+                font-size: 13px;
+                color: #77869E;
+                font-family: 'regular';
+            }
+        }
+
+        .price {
+            position: absolute;
+            right: 20px;
+            color: #EE5A55;
+            font-family: 'semi-bold';
+        }
+    }
+}

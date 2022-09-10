@@ -1,0 +1,48 @@
+<ion-content>
+  <div class="main_content_div">
+
+      <div class="gradient_div">
+          <div class="abs_round"></div>
+          <div class="flex_header">
+              <ion-icon name="arrow-back" (click)="goBack()"></ion-icon>
+              <ion-label>Your Activity</ion-label>
+          </div>
+          
+      </div>
+
+      <div class="container_div">
+          <div class="white_box">
+              <div class="amount_detail">
+                  <ion-label class="simp_lbl">Name</ion-label>
+                  <ion-label class="simp_lbl">Mausam Chavda</ion-label>
+              </div>
+              <div class="amount_detail">
+                  <ion-label class="simp_lbl">IFSC</ion-label>
+                  <ion-label class="simp_lbl">BANK1234</ion-label>
+              </div>
+              <div class="amount_detail">
+                  <ion-label class="simp_lbl">My Account</ion-label>
+                  <ion-label class="amount_lbl">20,000</ion-label>
+              </div>
+
+              <ion-input type="text" placeholder="Search">
+                  <ion-icon name="search"></ion-icon>
+              </ion-input>
+
+          </div>
+
+          <ion-label class="title_lbl">Transaction</ion-label>
+            
+          <div class="shopping_div" *ngFor="let item of activity">
+              <div class="content_div">
+                  <ion-label class="date">{{item.date}}</ion-label>
+                  <ion-label class="name">{{item.name}}</ion-label>
+              </div>
+              <ion-label class="blue_lbl" *ngIf="item.type == 'c'">+ {{item.amount}}</ion-label>
+              <ion-label class="light_lbl" *ngIf="item.type == 'w'">- {{item.amount}}</ion-label>
+          </div>
+
+      </div>
+
+  </div>
+</ion-content>

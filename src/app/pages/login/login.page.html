@@ -1,0 +1,46 @@
+<ion-content>
+    <div class="main_content_div">
+
+        <ion-label class="welcome_lbl">Welcome Login</ion-label>
+
+        <ion-grid fixed>
+            <ion-row>
+                <ion-col size="6">
+                    <div class="btn_div">
+                        <img src="assets/imgs/facebook.png">
+                    </div>
+                </ion-col>
+                <ion-col size="6">
+                    <div class="btn_div">
+                        <img src="assets/imgs/google.png">
+                    </div>
+                </ion-col>
+            </ion-row>
+        </ion-grid>
+
+        <ion-item>
+            <ion-label position="floating">Username</ion-label>
+            <ion-input></ion-input>
+        </ion-item>
+
+        <ion-item>
+            <ion-label position="floating">Password</ion-label>
+            <ion-input></ion-input>
+        </ion-item>
+
+        <div class="flex_div">
+            <div class="check_flex">
+                <ion-checkbox></ion-checkbox>
+                <ion-label>Remember me</ion-label>
+            </div>
+            <ion-label class="flex_lbl" (click)="goToForgot()">Forgot password ?</ion-label>
+        </div>
+
+        <ion-button expand="block" (click)="goToHome()">
+            Login
+        </ion-button>
+
+        <ion-label class="last_lbl">Don't have an account ? <span (click)="goToRegister()">Sign up</span></ion-label>
+
+    </div>
+</ion-content>

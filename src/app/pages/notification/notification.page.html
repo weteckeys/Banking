@@ -1,0 +1,21 @@
+<ion-header class="ion-no-border" mode="ios">
+  <ion-toolbar style="--background: var(--ion-color-primary)">
+    <ion-title style="color: white;letter-spacing: 1px;font-family: 'semi-bold';">Notifications</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <div class="main_content_div">
+
+        <ion-label class="title_lbl">All Notification</ion-label>
+        <div class="notification_div" *ngFor="let item of list">
+            <div class="round_div">
+                <ion-icon name="{{item.icn}}"></ion-icon>        
+            </div>
+            <div class="content_div">
+                <ion-label>{{item.text}}</ion-label>
+            </div>
+        </div>
+        
+    </div>
+</ion-content>

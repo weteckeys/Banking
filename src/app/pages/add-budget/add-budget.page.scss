@@ -1,0 +1,44 @@
+.grey_box {
+    background: #DFE7F5;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 30px;
+}
+.main_content_div {
+    padding: 16px;
+    padding-top: 30px;
+
+    ion-label {
+        display: block;
+    }
+
+    .welcome_lbl {
+        font-size: 26px;
+        font-family: 'semi-bold';
+        margin-bottom: 20px;
+    }
+
+    ion-item {
+        --padding-start: 0px;
+        margin-top: 16px;
+    }
+
+    .btn_div {
+        margin-top: 20px;
+        text-align: center;
+        ion-button {
+            --border-radius: 25px;
+        }
+    }
+
+    .last_btn {
+        --border-radius: 3px;
+        font-family: 'semi-bold';
+        width: 200px;
+        display: block;
+        margin: auto;
+        margin-top: 30px;
+    }
+}

@@ -1,0 +1,60 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar>
+      <ion-button (click)="goBack()" fill="clear" slot="start">
+          <ion-icon name="arrow-back" style="font-size: 26px;color: black"></ion-icon>
+      </ion-button>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="main_content_div">
+
+      <ion-label class="welcome_lbl">Money Transfer</ion-label>
+
+      <ion-label class="title_lbl">Send Money to</ion-label>
+
+      <ion-slides mode="ios" scrollbar="ios" [options]="slideOpts" class="user_slider">
+          <ion-slide *ngFor="let item of users">
+              <div class="slide_div">
+                  <div class="back_image" [style.backgroundImage]="'url('+ item.image +')'"></div>
+                  <ion-label class="username">Jonh <br> Doe</ion-label>
+              </div>
+          </ion-slide>
+      </ion-slides>
+
+      <div [style.backgroundImage]="'url(assets/imgs/users/user12.jpg)'" class="user_back"></div>
+
+     
+      <ion-label class="title_lbl">Bank Detail</ion-label>
+      <ion-select value="peperoni" multiple="true" placeholder="Select Bank">
+        <ion-select-option value="HDFC">HDFC</ion-select-option>
+        <ion-select-option value="ICICI">ICICI</ion-select-option>
+        <ion-select-option value="Mahindra Kokal">Mahindra Kokal</ion-select-option>
+        <ion-select-option value="SBI">SBI</ion-select-option>
+      </ion-select>
+
+      <ion-label class="title_lbl">Account Detail</ion-label>
+     
+      <ion-item>
+          <ion-label position="floating">Enter Account No</ion-label>
+          <ion-input [(ngModel)]="accNo"></ion-input>
+      </ion-item>
+
+      <ion-item>
+          <ion-label position="floating">Confirm Account No</ion-label>
+          <ion-input [(ngModel)]="confirmAccNo"></ion-input>
+      </ion-item>
+
+      <ion-label class="title_lbl">Amount Detail</ion-label>
+
+      <ion-item>
+          <ion-label position="floating">Amout</ion-label>
+          <ion-input [(ngModel)]="amount"></ion-input>
+      </ion-item>
+
+      <ion-button expand="block">
+          Send Money
+      </ion-button>
+
+  </div>
+</ion-content>

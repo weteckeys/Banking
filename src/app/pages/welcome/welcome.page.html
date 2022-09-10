@@ -1,0 +1,84 @@
+<!-- <ion-content>
+    <div class="main_content_div">
+        <div class="upper_div">
+            <ion-label class="skip_lbl">SKIP</ion-label>
+            <img src="assets/imgs/capture.PNG" class="screen_cap">
+        </div>
+        <div class="slider_container">
+
+            <ion-slides mode="ios" pager="ios" scrollbar="ios">
+                <ion-slide>
+                    <h1>Awesome 1</h1>
+                </ion-slide>
+                <ion-slide>
+                    <h1>Awesome 2</h1>
+                </ion-slide>
+                <ion-slide>
+                    <h1>Awesome 3</h1>
+                </ion-slide>
+            </ion-slides>
+
+            <ion-slides mode="ios" pager="ios" scrollbar="ios">
+                <ion-slide *ngFor="let item of [1,2,3]">
+                    <div>
+                        <ion-label class="bold_lbl">In hac habitasse platea dictumst.</ion-label>
+                        <ion-label class="#77869E_lbl">Donec facilisis tortor ut augue lacinia, at viverra est semper. </ion-label>
+                    </div>
+                </ion-slide>
+            </ion-slides>
+
+            <ion-grid fixed>
+              <ion-row>
+                <ion-col size="6">
+                    <ion-button expand="block">
+                      Login
+                    </ion-button>
+                </ion-col>
+                <ion-col size="6">
+                    <ion-button expand="block" fill="clear" shape="round">
+                      Sign Up
+                    </ion-button>
+                </ion-col>
+              </ion-row>
+            </ion-grid>
+
+        </div>
+    </div>
+</ion-content> -->
+
+<ion-content>
+    <div class="main_content_div">
+        <div class="upper_div">
+            <ion-label class="skip_lbl">Skip</ion-label>
+            <img src="assets/imgs/capture.PNG" class="screen_cap">
+        </div>
+        <div class="slider_div">
+            
+            <ion-slides mode="ios" pager="ios" scrollbar="ios">
+                <ion-slide *ngFor="let item of [1,2,3]">
+                    <div class="slider_content">
+                        <ion-label class="bold_lbl">In hac habitasse platea dictumst.</ion-label>
+                        <ion-label class="grey_lbl">Donec facilisis tortor ut augue lacinia, at viverra est semper. </ion-label>
+                    </div> 
+                </ion-slide>
+            </ion-slides>
+
+            <ion-grid fixed>
+                <ion-row>
+                    <ion-col size="6">
+                        <ion-button expand="block" class="login_btn" (click)="goToLogin()">
+                            Login
+                        </ion-button>
+                    </ion-col>
+                    <ion-col size="6">
+                        <ion-button expand="block" class="reg_btn" (click)="goToRegister()">
+                            Sign Up
+                        </ion-button>
+                    </ion-col>
+                </ion-row>
+            </ion-grid>
+
+
+        </div>
+    </div>
+</ion-content>

@@ -1,0 +1,47 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar>
+      <ion-button (click)="goBack()" fill="clear" slot="start">
+          <ion-icon name="arrow-back" style="font-size: 26px;color: black"></ion-icon>
+      </ion-button>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <div class="main_content_div">
+
+        <ion-label class="welcome_lbl">Settings</ion-label>
+
+        <div class="grey_box">
+            <div class="upper_div">
+                <div class="round_div">
+                    <ion-icon name="wallet-outline"></ion-icon>
+                </div>
+                <div class="lbls_div">
+                    <ion-label class="simp_lbl">Available To Invest</ion-label>
+                    <ion-label class="amount_lbl">Rs. 500</ion-label>
+                </div>
+            </div>
+            <div class="lower_div" (click)="goToAddBudget()">
+                <ion-label>Add Money</ion-label>
+            </div>
+        </div>
+
+        <ion-label class="bold_lbl">My Account</ion-label>
+
+        <div class="flex_div">
+            <ion-icon name="person-outline"></ion-icon>
+            <ion-label>Account Detail</ion-label>
+        </div>
+
+        <div class="flex_div">
+            <ion-icon name="card-outline"></ion-icon>
+            <ion-label>Bank Detail</ion-label>
+        </div>
+
+        <div class="flex_div" (click)="goToNotifications()">
+            <ion-icon name="notifications-outline"></ion-icon>
+            <ion-label>Notifications</ion-label>
+        </div>
+
+    </div>
+</ion-content>

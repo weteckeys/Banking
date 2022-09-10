@@ -1,0 +1,112 @@
+<ion-header mode="ios" class="ion-no-border">
+  <ion-toolbar>
+    <ion-title></ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <div class="main_container_div">
+
+        <div class="flex_header">
+            <ion-label>Expenses</ion-label>
+            <img src="assets/imgs/expense.png">
+        </div>
+
+        <div class="flex_div">
+            <div class="left_div">
+                <ion-label class="simple_lbl">Card Balance</ion-label>
+                <ion-label class="price">$6,390</ion-label>
+            </div>
+            
+            <div class="right_div">
+                <div style="display: flex;align-items: center;margin-bottom: 10px;">
+                    <div class="color_div" style="background-color: rgba(41, 191, 118, 0.2);" >
+                        <ion-icon name="arrow-up-sharp" style="color: #1BC773;font-size: 16px;"></ion-icon>
+                    </div>
+                    <ion-label style="color: #1BC773">$3,214</ion-label>
+                </div>
+                <div style="display: flex;align-items: center;margin-top: 10px;">
+                    <div class="color_div" style="background-color: rgba(242, 71, 80, 0.2);">
+                        <ion-icon name="arrow-down-sharp" style="color: #F24750;font-size: 16px;"></ion-icon>
+                    </div>
+                    <ion-label style="color: #F24750">$1,168</ion-label>
+                </div>
+            </div>
+        </div>
+
+        <div class="month_div">
+            <div class="popover_div">
+                <ion-label>Monthly</ion-label>
+                <ion-icon name="chevron-down-outline"></ion-icon>
+            </div>
+            <div class="month_list">
+                <div class="small_btn" [class.active]="tabID == 'Jan'" (click)="tabID = 'Jan'">
+                    <ion-label>Jan</ion-label>
+                </div>
+                <div class="small_btn" [class.active]="tabID == 'Feb'" (click)="tabID = 'Feb'">
+                    <ion-label>Feb</ion-label>
+                </div>
+                <div class="small_btn" [class.active]="tabID == 'Mar'" (click)="tabID = 'Mar'">
+                    <ion-label>Mar</ion-label>
+                </div>
+                <div class="small_btn" [class.active]="tabID == 'Apr'" (click)="tabID = 'Apr'">
+                    <ion-label>Apr</ion-label>
+                </div>
+                <div class="small_btn" [class.active]="tabID == 'May'" (click)="tabID = 'May'">
+                    <ion-label>May</ion-label>
+                </div>
+                <div class="small_btn" [class.active]="tabID == 'Jun'" (click)="tabID = 'Jun'">
+                    <ion-label>Jun</ion-label>
+                </div>
+                <div class="small_btn" [class.active]="tabID == 'Jul'" (click)="tabID = 'Jul'">
+                    <ion-label>Jul</ion-label>
+                </div>
+                <div class="small_btn" [class.active]="tabID == 'Aug'" (click)="tabID = 'Aug'">
+                    <ion-label>Aug</ion-label>
+                </div>
+                <div class="small_btn" [class.active]="tabID == 'Sept'" (click)="tabID = 'Sept'">
+                    <ion-label>Sept</ion-label>
+                </div>
+                <div class="small_btn" [class.active]="tabID == 'Oct'" (click)="tabID = 'Oct'">
+                    <ion-label>Oct</ion-label>
+                </div>
+                <div class="small_btn" [class.active]="tabID == 'Nov'" (click)="tabID = 'Nov'">
+                    <ion-label>Nov</ion-label>
+                </div>
+                <div class="small_btn" [class.active]="tabID == 'Dec'" (click)="tabID = 'Dec'">
+                    <ion-label>Dec</ion-label>
+                </div>
+                
+            </div>
+        </div>
+
+        <div>
+            <canvas baseChart style="width: 100%;" height="300" 
+                [datasets]="lineChartData"
+                [labels]="lineChartLabels"
+                [options]="lineChartOptions"
+                [colors]="lineChartColors"
+                [legend]="lineChartLegend"
+                [chartType]="lineChartType"
+                (chartHover)="chartHovered($event)"
+                (chartClick)="chartClicked($event)">
+            </canvas>
+        </div>
+
+        
+
+        <ion-label class="title_lbl">Spending Breakdown</ion-label>
+
+        <div class="shopping_div" *ngFor="let item of activity">
+            <div class="color_box" [ngStyle]="{'backgroundColor' : item.color}">
+                <img src="{{item.image}}">
+            </div>
+            <div class="content_div">
+                <ion-label class="name">{{item.name}}</ion-label>
+                <ion-label class="date">17 Monday June</ion-label>
+            </div>
+            <ion-label class="price">{{item.price}}</ion-label>
+        </div>
+
+    </div>
+</ion-content>

@@ -1,0 +1,128 @@
+<ion-header mode="ios" class="ion-no-border">
+  <ion-toolbar>
+    <ion-title></ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <div class="main_container_div">
+
+        <div class="flex_header">
+            <ion-label>
+              <span class="bold_span">Wallet </span> 
+              for <span class="blue_span">Axess Platinum</span> Card
+            </ion-label>
+            <img src="assets/imgs/credit-card.png">
+        </div>
+
+        <ion-slides mode="ios" scrollbar="ios" class="card_slider" [options]="slideCardOpts">
+            <ion-slide>
+                <div class="card_div">
+                    <img src="assets/imgs/mastercard.png">
+                    <ion-label class="card_no">••••  ••••  ••••  0113</ion-label>
+                    <div class="flex_div">
+                        <ion-label>JONATHAN DAVIS</ion-label>
+                        <ion-label>11/22</ion-label>
+                    </div>
+                    <div class="side_abs"></div>
+                    <div class="bottom_abs"></div>
+                </div>
+            </ion-slide>
+            <ion-slide>
+                <div class="card_div">
+                    <img src="assets/imgs/mastercard.png">
+                    <ion-label class="card_no">••••  ••••  ••••  0113</ion-label>
+                    <div class="flex_div">
+                        <ion-label>JONATHAN DAVIS</ion-label>
+                        <ion-label>11/22</ion-label>
+                    </div>
+                    <div class="side_abs"></div>
+                    <div class="bottom_abs"></div>
+                </div>
+            </ion-slide>
+        </ion-slides>
+
+        <div class="flex_div">
+            <ion-label class="f_lbl">Remaining Amount</ion-label>
+            <ion-label class="s_lbl">%38</ion-label>
+        </div>
+
+        <div class="gradient_div"></div>
+
+        <ion-grid fixed>
+            <ion-row>
+                <ion-col size="6">
+                    <div class="grid_flex">
+                        <div class="color_div" style="background-color: rgba(41, 191, 118, 0.2);" >
+                            <ion-icon name="arrow-up-sharp" style="color: #1BC773;"></ion-icon>
+                        </div>
+                        <div class="content_flex">
+                            <ion-label class="grey_lbl">Income</ion-label>
+                            <ion-label class="price">$3,214</ion-label>
+                        </div>
+                    </div>
+                </ion-col>
+                <ion-col size="6">
+                    <div class="grid_flex">
+                        <div class="color_div" style="background-color: rgba(242, 71, 80, 0.2);">
+                        <ion-icon name="arrow-down-sharp" style="color: #F24750;"></ion-icon>
+                        </div>
+                        <div class="content_flex">
+                            <ion-label class="grey_lbl">Income</ion-label>
+                            <ion-label class="price">$3,214</ion-label>
+                        </div>
+                    </div>
+                </ion-col>
+            </ion-row>
+        </ion-grid>
+
+        <ion-label class="title_lbl">Send Money to</ion-label>
+
+        <ion-slides mode="ios" scrollbar="ios" [options]="slideOpts" class="user_slider">
+            <ion-slide (click)="goToAddContact()">
+                <div class="slide_div">
+                    <img src="assets/imgs/plus.png" style="margin-top: 14px;margin-bottom: 14px;">
+                    <ion-label>Add New Contact</ion-label>
+                </div>
+            </ion-slide>
+            <ion-slide *ngFor="let item of users">
+                <div class="slide_div">
+                    <div class="back_image" [style.backgroundImage]="'url('+ item.image +')'"></div>
+                    <ion-label class="username">Jonh <br> Doe</ion-label>
+                </div>
+            </ion-slide>
+        </ion-slides>
+
+        <ion-label class="title_lbl">Transactions</ion-label>
+
+        <div class="btn_flex">
+            <div class="small_btn" [class.active]="tabID == 1" (click)="tabID = 1">
+                <ion-label>Day</ion-label>
+            </div>
+            <div class="small_btn" [class.active]="tabID == 2" (click)="tabID = 2">
+                <ion-label>Week</ion-label>
+            </div>
+            <div class="small_btn" [class.active]="tabID == 3" (click)="tabID = 3">
+                <ion-label>Month</ion-label>
+            </div>
+            <div class="small_btn" [class.active]="tabID == 4" (click)="tabID = 4">
+                <ion-label>Year</ion-label>
+            </div>
+        </div>
+
+        <div class="shopping_div" *ngFor="let item of activity">
+            <div class="color_box" [ngStyle]="{'backgroundColor' : item.color}">
+                <img src="{{item.image}}">
+            </div>
+            <div class="content_div">
+                <ion-label class="name">{{item.name}}</ion-label>
+                <ion-label class="date">17 Monday June</ion-label>
+            </div>
+            <ion-label class="price">{{item.price}}</ion-label>
+        </div>
+
+
+
+
+    </div>
+</ion-content>

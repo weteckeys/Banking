@@ -1,0 +1,104 @@
+<ion-content>
+    <div class="main_content_div">
+
+        <div class="gradient_div">
+            <div class="abs_round"></div>
+            <div class="flex_header">
+                <ion-label>Your Budget</ion-label>
+                <ion-icon name="notifications"></ion-icon>
+            </div>
+        </div>
+
+        <div class="container_div">
+
+            <div class="white_box">
+                <div class="flex_div">
+                    <ion-label class="span_lbl">for <span>Axess Platinum</span> Card</ion-label>
+                    <ion-label class="bold_lbl" (click)="goToAddBudget()">Add Budget</ion-label>
+                </div>
+
+                <ion-slides mode="ios" pager="ios" scrollbar="ios">
+                    <ion-slide *ngFor="let item of [1,2,3]">
+                        <div>
+                            <div class="half-circle">
+                                <div class="inner_circle">
+                                    <img src="assets/imgs/card_2.png">
+                                    <ion-label class="grey_lbl">You Are Spent</ion-label>
+                                    <ion-label class="price_lbl">$6,390</ion-label>
+                                    <ion-label class="grey_lbl">of $3,248</ion-label>
+                                </div>
+                            </div>
+                            <div class="abs_div">
+                                <ion-label>0%</ion-label>
+                                <ion-label>100%</ion-label>
+                            </div>
+                        </div>   
+                    </ion-slide>
+                </ion-slides>
+
+                <!-- <div class="half-circle">
+                    <div class="inner_circle">
+                        <img src="assets/imgs/card_2.png">
+                        <ion-label class="#77869E_lbl">You Are Spent</ion-label>
+                        <ion-label class="price_lbl">$6,390</ion-label>
+                        <ion-label class="#77869E_lbl">of $3,248</ion-label>
+                    </div>
+                </div>
+                <div class="abs_div">
+                    <ion-label>0%</ion-label>
+                    <ion-label>100%</ion-label>
+                </div> -->
+
+            </div>
+
+            <ion-grid fixed>
+                <ion-row>
+                    
+                    <ion-col size="6">
+                        <ion-button expand="block" (click)="goToTransfer()">
+                            <img src="assets/imgs/send.png">
+                            <ion-label>Send Money</ion-label>
+                        </ion-button>
+                    </ion-col>
+
+                    <ion-col size="6">
+                        <ion-button expand="block" (click)="goToActivity()">
+                            <img src="assets/imgs/calculation.png">
+                            <ion-label>Calculation</ion-label>
+                        </ion-button>
+                    </ion-col>
+                    
+                </ion-row>
+            </ion-grid>
+
+            <ion-label class="title_lbl">Transactions</ion-label>
+            <div class="btn_flex">
+                <div class="small_btn" [class.active]="tabID == 1" (click)="tabID = 1">
+                    <ion-label>Day</ion-label>
+                </div>
+                <div class="small_btn" [class.active]="tabID == 2" (click)="tabID = 2">
+                    <ion-label>Week</ion-label>
+                </div>
+                <div class="small_btn" [class.active]="tabID == 3" (click)="tabID = 3">
+                    <ion-label>Month</ion-label>
+                </div>
+                <div class="small_btn" [class.active]="tabID == 4" (click)="tabID = 4">
+                    <ion-label>Year</ion-label>
+                </div>
+            </div>
+
+            <div class="shopping_div" *ngFor="let item of activity">
+                <div class="color_box" [ngStyle]="{'backgroundColor' : item.color}">
+                    <img src="{{item.image}}">
+                </div>
+                <div class="content_div">
+                    <ion-label class="name">{{item.name}}</ion-label>
+                    <ion-label class="date">17 Monday June</ion-label>
+                </div>
+                <ion-label class="price">{{item.price}}</ion-label>
+            </div>
+
+        </div>
+
+    </div>
+</ion-content>

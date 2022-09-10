@@ -1,0 +1,72 @@
+<ion-content>
+  <div class="main_content_div">
+
+      <div class="gradient_div">
+          <div class="abs_round"></div>
+          <div class="flex_header">
+              <ion-label>Profile</ion-label>
+              <img src="assets/imgs/edit.png" (click)="goToEditProfile()">
+          </div>
+      </div>
+
+      <div class="container_div">
+          <div class="white_box">
+              
+              <div [style.backgroundImage]="'url(assets/imgs/users/user12.jpg)'" class="user_back"></div>
+
+              <div class="flex_div">
+                  <ion-label>Ricardo Joseph</ion-label>
+                  <img src="assets/imgs/verified.png">
+              </div>
+
+              <ion-label class="grey_lbl">ricardojoseph@gmail.com</ion-label>
+
+              <div class="grey_box">
+                  <img src="assets/imgs/badge_1.png">
+                  <img src="assets/imgs/badge_2.png">
+                  <img src="assets/imgs/badge_3.png">
+                  <img src="assets/imgs/badge_4.png">
+              </div>
+
+          </div>
+
+          <ion-label class="title_lbl">GENERAL</ion-label>
+            
+          <div class="shopping_div" (click)="goToEditProfile()">
+              <div class="color_box">
+                  <img src="assets/imgs/settings.png">
+              </div>
+              <div class="content_div">
+                  <ion-label class="name">Profile Settings</ion-label>
+                  <ion-label class="date">Update and modify your profile</ion-label>
+              </div>
+              <ion-icon name="chevron-forward-sharp"></ion-icon>
+          </div>
+
+          <div class="shopping_div" (click)="goToChangePassword()">
+              <div class="color_box">
+                  <img src="assets/imgs/privacy.png">
+              </div>
+              <div class="content_div">
+                  <ion-label class="name">Privacy</ion-label>
+                  <ion-label class="date">Change your password</ion-label>
+              </div>
+              <ion-icon name="chevron-forward-sharp"></ion-icon>
+          </div>
+
+          <div class="shopping_div" (click)="goToSettings()">
+              <div class="color_box">
+                  <img src="assets/imgs/notification.png">
+              </div>
+              <div class="content_div">
+                  <ion-label class="name">Settings</ion-label>
+                  <ion-label class="date">Change your settings</ion-label>
+              </div>
+              <ion-icon name="chevron-forward-sharp"></ion-icon>
+          </div>
+
+
+      </div>
+
+  </div>
+</ion-content>
